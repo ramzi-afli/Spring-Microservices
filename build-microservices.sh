@@ -1,13 +1,13 @@
 #building auth-server  microservice
-mvn -f ./authorization-server/ clean  install -DskipTests=true && docker build -t auth-service:$(date +%s) ./authorization-server/
+mvn -f ./authorization-server/ clean  install -DskipTests=true 
 
 
 #building gatewy-service  microservice
-mvn -f ./gateway/ clean install -DskipTests=true && docker build -t gateway-service:$(date +%s) ./gateway/
+mvn -f ./gateway/ clean install -DskipTests=true 
 
 #building config-service  microservice
-mvn -f ./config-server/ clean install -DskipTests=true && docker build -config-serve:$(date +%s) ./config-serve/
+mvn -f ./config-server/ clean install -DskipTests=true 
 
 
 #building discovery-service  microservice
-mvn -f ./discovery/ clean install -DskipTests=true && docker build -discovery-serve:$(date +%s) ./discovery/
+mvn -f ./discovery/ clean install -DskipTests=true 
